@@ -1,0 +1,129 @@
+/* will smylie website css */
+body {
+    /*padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;*/
+    background-color: #202024;
+    color: #c7c7c7;
+    font-family: Lato, Helvetica, sans-serif;
+}
+a:link {
+    color: #62C4B5;
+}
+a:visited {
+    color: #A36BC6;
+}
+a:hover {
+    color: #00c4c4;
+}
+h2 {
+    color: #F8C626;
+    padding: 10px;
+    margin: 0px;
+    background-color: #2D2D33;
+    text-align: center;
+    /*max-width: max-content;
+    border: 1px solid #F8C626;*/
+}
+img {
+    /*float: right;*/
+    border: 1px solid #F8C626;
+}
+abbr {
+    color:#F8C626;
+}
+p {
+    margin: 0 0 10px 0;
+}
+#contain {
+    width: 70%;
+    min-width: 1000px;
+    margin: 10px 15%;
+    border: 1px solid #E61D77;
+    line-height: 120%;
+}
+#header {
+    background-color: #2D2D33;
+    border: 1px solid #E61D77;
+    padding: 20px;
+    max-width: 100%;
+    text-align: center;
+}
+#header h1 {
+    padding: 0px 0px 10px 0px;
+    margin: 0px;
+}
+#leftcol {
+    float: left;
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+}
+#leftcol h2 {
+    text-align: left;
+    border-bottom: 1px solid #E61D77;
+}
+#leftcol h4 {
+    padding: 5px 0px 0px 10px;
+    margin: 0px;
+}
+#rightcol {
+    float: right;
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+#rightcol img {
+    margin: 0px 10%;
+    width: 80%;
+}
+#rightcol a {
+    font-style: italic;
+    font-size: 80%;
+    margin: 0px 0px 0px 5px;
+}
+#centercol {
+    margin-left: 200px;
+    border-left: 1px solid #E61D77;
+    margin-right: 200px;
+    border-right: 1px solid #E61D77;
+}
+#footer {
+    clear: both;
+    background-color: #2D2D33;
+    border: 1px solid #E61D77;
+    padding: 10px;
+    font-style: italic;
+    font-size: 80%;
+    max-width: 100%;
+}
+.catagory {
+    border: 1px solid #E61D77;
+    padding: 20px;
+}
+.fancy {
+    font-weight: bold;
+    color: #E61D77;
+}
+.horiz-line {
+    background-color: #F8C626;
+    height: 1px;
+    max-width: 100%;
+}
+.fr {
+    float: right;
+    margin-left: 10px;
+    font-style: italic;
+    font-size: 70%;
+    width: 30%;
+    text-align: center;
+}
+.fl {
+    float: left;
+    margin-right: 10px;
+    font-style: italic;
+    font-size: 70%;
+    width: 30%;
+    text-align: center;
+}

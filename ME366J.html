@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>William Smylie: Senior Capstone ME366J</title>
+  <link rel="stylesheet" media="screen" href="SmyliePortfolio.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="William Smylie Portfolio">
+  <meta name="author" content="William Smylie">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <!--<script type="text/javascript" src="hw13script.js"></script>-->
+</head> 
+
+<body> <!--<body onload="fn()">-->
+<div id="contain">
+  <div id="header">
+    <h1>Senior Capstone ME366J</h1>
+  </div>
+  <div id="welcome">
+    <h3>Primary Skills/Tasks</h3>
+    <ul style="margin:0px 15%; text-align: left;">
+      <li>Small Electronics / Mechatronics</li>
+      <li>CAD and Design</li>
+      <li>Fabrication, Build, and Troubleshooting</li>
+    </ul>
+  </div>
+  <div style="width:100%;height:100px;float:left"></div>
+  <div id="projects">
+    <div style="width:100%;">
+      <img src="imgs/ME266J_img1.png" style="width:60%;margin:auto">
+    </div>
+    <div class="projmaintext">
+      <div style="width:100%;height:30px"></div> <!-- this is just a spacer -->
+      <p>This project-based class led groups through the entire process of product design, from interest studies through a finished round of prototyping. While ideation and concept generation were whole-team efforts, each member of our team had a more specialized role in the prototyping process. My primary roles were software/electronics and build, although I also contributed to design and fabrication efforts.</p>
+      <div style="width:100%;height:30px"></div> <!-- this is just a spacer -->
+      <p>My software role on this project involved diving into and implementing the <a href="https://github.com/grbl/grbl">GRBL</a> open source CNC software on an arduino with motor shield, setting up the software pipeline to get from a vector drawing to gcode, and running that gcode on the project. GRBL is a highly optimized software package, getting the absolute most it can out of the limited computing resources of an arduino. As a result, any customization needs to take place in the gcode file; GRBL is compressed and fairly difficult to edit for a novice. To this end, I wrote a small python script to convert a CSV into strings of gcode, allowing me to fine tune the output for the project. For example, the Z axis scissor lift was driven by a stepper motor attached to a drive screw. This resulted in a non-linear relationship between turns of the stepper and difference in height depending on where in the extension of the scissor lift you were. This was taken into account during gcode production, to produce the intended output. The gcode was then run on the machine via the <a href="https://winder.github.io/ugs_website/">Universal Gcode Sender</a> and <a href="https://github.com/Denvi/Candle">Candle modules</a>. Some screenshots and images relevant to this process can be found below.</p>
+      <div style="width:100%;height:30px"></div> <!-- this is just a spacer -->
+    </div>
+    <div style="width:100%;">
+      <img src="imgs/ME266J_img2.png" style="width:60%;margin:auto">
+      <p>Examples of the Candle UI.</p>
+      <div style="width:100%;height:30px"></div> <!-- this is just a spacer -->
+      <img src="imgs/ME266J_img3.png" style="width:60%;margin:auto">
+      <p>Testing GRBL's spindle control pin-out with the relay (motor sheild removed).</p>
+      <div style="width:100%;height:30px"></div> <!-- this is just a spacer -->
+    </div>
+    <div class="projmaintext">
+      <div style="width:100%;height:30px"></div> <!-- this is just a spacer -->
+      <p>I was also the primary assembly and debug member of the team, which included building and debugging the scissor lift (Z axis) as well as integrating all of the electronics onto the XY rail gantry system - this included relays for the spindle motor, status LEDs, power cabling, and more. The finished product can be seen in the following images.</p>
+      <div style="width:100%;height:30px"></div> <!-- this is just a spacer -->
+    </div>
+    <div style="width:100%;">
+      <img src="imgs/ME266J_img4.png" style="width:60%;margin:auto">
+      <p>Scissor lift for Z axis, CAD (top) and produced (bottom).</p>
+      <div style="width:100%;height:30px"></div> <!-- this is just a spacer -->
+      <img src="imgs/ME266J_prevImg.png" style="width:60%;margin:auto">
+      <p>Final project prototype, front view.</p>
+      <div style="width:100%;height:30px"></div> <!-- this is just a spacer -->
+    </div>
+  </div>
+  <div id="footer">
+    <a href="index.html">Return to home</a><br />
+    <br />
+    Copyright Will Smylie, Author<br />
+    Page last updated: 7/7/2022<br />
+    Author: <a href="mailto:williamsmylie0@gmail.com"> Will Smylie</a>
+  </div>
+</div>
+</body> 
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>William Smylie Exam2</title>
+    <link rel="stylesheet" media="screen" href="SMYexam2.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="william smylie exam2">
+	<meta name="author" content="William Smylie">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="SMYexam2.js"></script>
+</head> 
+<!-- this is the Exam2 for BULKO's CS 329E Web Dev Class -->
+<body onload="gameboot()">
+<div id="contain">
+    <div id="header">
+        <h1 class="fancy">Tic-Tac-Toe</h1>
+    </div>
+    <div id="centercol">
+        <div class="catagory">
+            <table>
+                <tr>
+                    <td style="height:50px;" colspan="3"><h2 id="scoreout"></h2></td>        
+                </tr>
+                <tr>
+                    <td><button id="sq0" type="button" class="toesquare" onclick="return sqclick('sq0')"></button></td>
+                    <td><button id="sq1" type="button" class="toesquare" onclick="return sqclick('sq1')"></button></td>
+                    <td><button id="sq2" type="button" class="toesquare" onclick="return sqclick('sq2')"></button></td>
+                </tr>
+                <tr>
+                    <td><button id="sq3" type="button" class="toesquare" onclick="return sqclick('sq3')"></button></td>
+                    <td><button id="sq4" type="button" class="toesquare" onclick="return sqclick('sq4')"></button></td>
+                    <td><button id="sq5" type="button" class="toesquare" onclick="return sqclick('sq5')"></button></td>
+                </tr>
+                <tr>
+                    <td><button id="sq6" type="button" class="toesquare" onclick="return sqclick('sq6')"></button></td>
+                    <td><button id="sq7" type="button" class="toesquare" onclick="return sqclick('sq7')"></button></td>
+                    <td><button id="sq8" type="button" class="toesquare" onclick="return sqclick('sq8')"></button></td>
+                </tr>
+                <tr>
+                    <td style="height:50px;"><button type="button" onclick="return gameboot()">Replay</button></td>
+                    <td colspan="2"><p>FYI: Ideal window with is ~1200px</p></td>
+                </tr>
+            
+            </table>
+              
+        </div>
+    <div id="footer">
+        Copyright Will Smylie, Author<br />
+        Page last updated: 4/9/2021<br />
+        Author: <a href="mailto:williamsmylie@utexas.edu"> Will Smylie</a>
+    </div>
+</div>
+</body> 
+</html>

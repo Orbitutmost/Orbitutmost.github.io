@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>William Smylie HW3</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="william smylie HW3">
+	<meta name="author" content="William Smylie">
+</head> 
+<!-- this is the HW3 for BULKO's CS 329E Web Dev Class -->
+<body>
+<form method="POST" action="http://www.cknuckles.com/cgi/echo.cgi"> <!-- form for this doc -->
+<table>
+    <tr>
+        <td colspan="2"> <h2>Campus Visit Feedback Form</h2></td>        
+    </tr>
+    <tr> 
+        <td>Name:</td>
+        <td><label><input name="visitorName" type="text" size="30" /></label></td>
+    </tr>
+    <tr> 
+        
+        <td>Street Address:</td>
+        <td><label><input name="visitorAddress" type="text" size="30" /></label></td>
+         
+    </tr>
+    <tr> 
+        <td>E-mail Address:</td>
+        <td><label><input name="visitorEmail" type="text" size="30" /></label></td>
+     </tr>
+    <tr>
+        <td colspan="2">What you liked most:</td>
+    </tr>
+    <tr> 
+        <td>Students</td>
+        <td><label><input name="liked[]" type="checkbox" value="students" /></label></td>
+     </tr>
+    <tr> 
+        <td>Location</td>
+        <td><label><input name="liked[]" type="checkbox" value="location" /></label></td>
+     </tr>
+    <tr> 
+        <td>Campus</td>
+        <td><label><input name="liked[]" type="checkbox" value="campus" /></label></td>
+     </tr>
+    <tr> 
+        <td>Courses Offered</td>
+        <td><label><input name="liked[]" type="checkbox" value="courses" /></label></td>
+     </tr>
+    <tr> 
+        <td>Housing</td>
+        <td><label><input name="liked[]" type="checkbox" value="housing" /></label></td>
+     </tr>
+    <tr> 
+        <td>Sports</td>
+        <td><label><input name="liked[]" type="checkbox" value="sports" /></label></td>
+     </tr>
+    <tr>
+        <td colspan="2">What prompted you to look at UT:</td>
+    </tr>
+    <tr> 
+        <td>Family</td>
+        <td><label><input name="interest" type="radio" value="family" /></label></td>
+     </tr>
+    <tr> 
+        <td>Friends</td>
+        <td><label><input name="interest" type="radio" value="friends" /></label></td>
+     </tr>
+    <tr> 
+        <td>Televison</td>
+        <td><label><input name="interest" type="radio" value="television" /></label></td>
+     </tr>
+    <tr> 
+        <td>Internet</td>
+        <td><label><input name="interest" type="radio" value="internet" /></label></td>
+     </tr>
+    <tr> 
+        <td>Other</td>
+        <td><label><input name="interest" type="radio" value="other" /></label></td>
+     </tr>
+    <tr><td colspan="2">   </td></tr>
+    <tr> 
+        <td>Visited Department:</td>
+        <td><label>
+            <select name="dept">
+                <option selected="selected">College of Architecture</option>
+                <option>McCombs School of Business</option>
+                <option>Moody College of Communication</option>
+                <option>College of Education</option>
+                <option>Cockrell School of Engineering</option>
+                <option>College of Fine Arts</option>
+                <option>Jackson School of Geosciences</option>
+                <option>School of Information</option>
+                <option>College of Liberal Arts</option>
+                <option>College of Natural Sciences</option>
+                <option>School of Nursing</option>
+                <option>College of Pharmacy</option>
+                <option>Steve Hicks School of Social Work</option>
+                <option>School of Undergraduate Studies</option>
+        </select></label></td>
+     </tr>
+    <tr> 
+        <td>Additional Comments:</td>
+        <td><label><textarea name="comments" rows="4" cols="30">Comments here:</textarea></label></td>
+     </tr>
+    <tr> 
+        <td><input type="submit" value="Finish" /></td>
+        <td><input type="reset" value="Reset" /> </td>
+    </tr>
+
+</table>
+</form>
+
+Page last updated: 2/17/2021 <br />
+Author: <a href="mailto:williamsmylie@utexas.edu"> Will Smylie</a>
+
+</body>
+</html>

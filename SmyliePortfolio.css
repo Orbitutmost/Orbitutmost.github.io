@@ -1,0 +1,145 @@
+/* will smylie website css */
+
+@font-face {
+  font-family: 'bahnschrift';
+  src: url('fonts/BAHNSCHRIFT.woff2') format('woff2'),
+       url('fonts/BAHNSCHRIFT.woff') format('woff');
+  font-weight: 300;
+  font-stretch: condensed;
+}
+
+body {
+  /*padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;*/
+  background-color: #202024;
+  background: linear-gradient(0deg, #202024 0%, #202024 70%, #112470 100%);
+  color: #FFFFFF;
+  font-family: bahnschrift, Helvetica, sans-serif;
+  font-size: 10px;
+}
+a:link {
+  color: #3891FF;
+}
+a:visited {
+  color: #3891FF;
+}
+h1 {
+  padding: 10px;
+  margin: 0px;
+  text-align: center;
+  font-size: 7rem;
+}
+h2 {
+  padding: 10px;
+  margin: 0px;
+  font-size: 4.5rem;
+}
+h3 {
+  padding: 10px;
+  margin: 0px;
+  font-size: 2.5rem;
+}
+abbr {
+  color:#7FC9FF;
+}
+p {
+  margin: 10px;
+  font-size: 2rem;
+}
+ul {
+  margin: 10px;
+  font-size: 2rem;
+}
+table {
+  width: 100%;
+}
+tr:hover {
+  background-color: #36363D;
+}
+#contain {
+  max-width: 70%;
+  min-width: 700px;
+  margin: 10px 15%;
+  border: 0px solid #E61D77;
+  /*line-height: 120%;*/
+}
+#header {
+  /*background-color: #2D2D33;*/
+  border: 0px solid #E61D77;
+  padding: 20px;
+  max-width: 100%;
+  text-align: center;
+}
+#header h1 {
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
+}
+#welcome {
+  text-align: center;
+}
+#projects {
+  text-align: center;
+}
+#footer {
+  clear: both;
+  /*background-color: #2D2D33;*/
+  border: 1px solid #FFFFFF;
+  padding: 10px;
+  font-style: italic;
+  font-size: 1rem;
+  max-width: 100%;
+}
+.fancy {
+  font-weight: bold;
+}
+.fancy2 {
+  font-style: italic;
+}
+.horiz-line {
+  background-color: #FFFFFF;
+  height: 1px;
+  max-width: 100%;
+}
+.fr {
+  float: right;
+  margin-left: 10px;
+  font-style: italic;
+  font-size: 70%;
+  width: 30%;
+  text-align: center;
+}
+.fl {
+  float: left;
+  margin-right: 10px;
+  font-style: italic;
+  font-size: 70%;
+  width: 30%;
+  text-align: center;
+}
+.fc {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.cntr {
+  text-align: center;
+}
+.imgpeak {
+  width: 35%;
+  /*height: 130px;*/
+}
+.projpeak {
+  width: 65%;
+  text-align: right;
+  color: #FFFFFF;
+}
+.projmaintext {
+  width: 80%;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0px 10%;
+}
+.projmaintext p {
+  font-size: 1.7rem;
+}

@@ -1,0 +1,125 @@
+Using username "willsmy".
+willsmy@tosca.cs.utexas.edu's password:
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 4.15.0-140-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+ * UTCS FAQ: http://www.cs.utexas.edu/facilities/faq/
+ * Report software problems to help@cs.utexas.edu
+  System information as of Fri Apr 30 20:17:20 CDT 2021
+
+  System load:  0.12               Processes:           293
+  Usage of /:   63.1% of 31.83GB   Users logged in:     0
+  Memory usage: 12%                IP address for eno1: 128.83.139.125
+  Swap usage:   0%
+
+
+Please note: this system is intended to serve the instructional,
+research, and administrative needs of the students, faculty, and
+staff of the UT Austin Department of Computer Sciences.  Any other
+use of this system, including but not limited to using any method
+to circumvent proper authentication or authorization, constitutes
+unauthorized access and may subject the user to criminal prosecution
+under Texas Computer Crime Statutes and other state or federal laws.
+
+tosca$ ls
+public_html
+tosca$ cd publi
+-bash: cd: publi: No such file or directory
+tosca$ cd public_html
+tosca$ ls
+tosca$ cd .
+tosca$ ..
+..: command not found
+tosca$ .
+-bash: .: filename argument required
+.: usage: . filename [arguments]
+tosca$ ls
+tosca$ cd /projects/coursework/2021-spring/cs329e-bulko/willsmy
+tosca$ ls
+HW10  HW12  HW14  HW17  HW3  HW5  HW7  HW9         Project
+HW11  HW13  HW15  HW2   HW4  HW6  HW8  index.html
+tosca$ mysql -h spring-2021.cs.utexas.edu -u cs329e_bulko_willsmy -p cs329e_bulk                                                                                                                                                             o_willsmy
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 150000
+Server version: 5.7.33-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases
+    -> show tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that                                                                                                                                                              corresponds to your MySQL server version for the right syntax to use near 'show                                                                                                                                                              tables' at line 2
+mysql> show tables
+    -> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that                                                                                                                                                              corresponds to your MySQL server version for the right syntax to use near 'show                                                                                                                                                              databases' at line 2
+mysql> show databases;
++----------------------+
+| Database             |
++----------------------+
+| information_schema   |
+| cs329e_bulko_willsmy |
++----------------------+
+2 rows in set (0.00 sec)
+
+mysql> use cs329e_bulko_willsmy;
+Database changed
+mysql> show tables;
+Empty set (0.01 sec)
+
+mysql> CREATE TABLE passwords (
+    -> user VARCHAR(50),
+    -> pass VARCHAR(50)
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> show tables;
++--------------------------------+
+| Tables_in_cs329e_bulko_willsmy |
++--------------------------------+
+| passwords                      |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> describe passwords;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| user  | varchar(50) | YES  |     | NULL    |       |
+| pass  | varchar(50) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO passwords VALUES (temp, temp);
+ERROR 1054 (42S22): Unknown column 'temp' in 'field list'
+mysql> INSERT INTO passwords (user, pass) VALUES
+    -> ("temp", "temp");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> describe passwords;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| user  | varchar(50) | YES  |     | NULL    |       |
+| pass  | varchar(50) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT user, pass FROM passwords
+    -> ;
++------+------+
+| user | pass |
++------+------+
+| temp | temp |
++------+------+
+1 row in set (0.00 sec)
+
+mysql> quit;
+Bye

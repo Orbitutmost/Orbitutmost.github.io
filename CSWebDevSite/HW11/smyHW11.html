@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>William Smylie HW11</title>
+    <link rel="stylesheet" media="screen" href="hw11.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="william smylie HW8">
+	<meta name="author" content="William Smylie">
+    <script type="text/javascript" src="hw11scrpt.js"></script>
+</head> 
+<!-- this is the HW11 for BULKO's CS 329E Web Dev Class -->
+<body onload="pickPz()">
+<div id="contain">
+    <div id="header">
+        <h1 class="fancy">Jigsaw Puzzle</h1>
+    </div>
+    <div id="centercol">
+        <div class="catagory">
+            <img class="" style="position: absolute; top: 100px; left: 225px;" id="pzbg" src="" alt="">
+            <img class="" style="position: absolute; top: 410px; left: 225px;" onmousedown="grab(event);" id="pz1" src="" alt="">
+            <img class="" style="position: absolute; top: 410px; left: 330px;" onmousedown="grab(event);" id="pz2" src="" alt="">
+            <img class="" style="position: absolute; top: 410px; left: 435px;" onmousedown="grab(event);" id="pz3" src="" alt="">
+            <img class="" style="position: absolute; top: 410px; left: 540px;" onmousedown="grab(event);" id="pz4" src="" alt="">
+            <img class="" style="position: absolute; top: 515px; left: 225px;" onmousedown="grab(event);" id="pz5" src="" alt="">
+            <img class="" style="position: absolute; top: 515px; left: 330px;" onmousedown="grab(event);" id="pz6" src="" alt="">
+            <img class="" style="position: absolute; top: 515px; left: 435px;" onmousedown="grab(event);" id="pz7" src="" alt="">
+            <img class="" style="position: absolute; top: 515px; left: 540px;" onmousedown="grab(event);" id="pz8" src="" alt="">
+            <img class="" style="position: absolute; top: 620px; left: 225px;" onmousedown="grab(event);" id="pz9" src="" alt="">
+            <img class="" style="position: absolute; top: 620px; left: 330px;" onmousedown="grab(event);" id="pz10" src="" alt="">
+            <img class="" style="position: absolute; top: 620px; left: 435px;" onmousedown="grab(event);" id="pz11" src="" alt="">
+            <img class="" style="position: absolute; top: 620px; left: 540px;" onmousedown="grab(event);" id="pz12" src="" alt="">
+            <span id="thetimer" class="fancy2" style="position: absolute; top: 730px; left: 225px;">Time: 0</span>
+            <button type="button" style="position: absolute; top: 730px; left: 500px;" onclick="return endtimer()">Done</button>
+            <span id="result" class="fancy2" style="position: absolute; top: 760px; left: 400px;"></span>
+        </div>
+    </div>
+    <!--<span style="position: absolute; top: 200px; left: 450px;" onmousedown="grabber(event);"> meow </span>-->
+    <div id="footer">
+        Copyright Will Smylie, Author<br />
+        Page last updated: 4/2/2021<br />
+        Author: <a href="mailto:williamsmylie@utexas.edu"> Will Smylie</a>
+    </div>
+</div>
+</body>
+</html>

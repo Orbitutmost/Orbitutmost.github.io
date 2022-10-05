@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>William Smylie HW6</title>
+    <link rel="stylesheet" media="screen" href="hw6.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="william smylie HW6">
+	<meta name="author" content="William Smylie">
+    <script src="hw6scrpt.js"></script>
+</head> 
+<!-- this is the HW6 for BULKO's CS 329E Web Dev Class -->
+<body>
+<div id="contain">
+    <div id="header">
+        <h1 class="fancy">Mortgage Calculator</h1>
+    </div>
+    <div id="centercol">
+        <div class="catagory">
+            <form name="mortcalc" method="POST" action="http://www.cknuckles.com/cgi/echo.cgi"> <!-- form for this doc -->
+                <table>
+                    <tr>
+                        <td colspan="2"><h2>Web Calculator</h2></td>        
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="cntr">Please fill the boxes with numbers only.</td>        
+                    </tr>
+                    <tr> 
+                        <td>Principal Amount:</td>
+                        <td><label><input name="prnamt" type="text" size="30" /></label></td>
+                    </tr>
+                    <tr> 
+                        
+                        <td>Yearly Interest (%)</td>
+                        <td><label><input name="yrlyint" type="text" size="30" /></label></td>
+                         
+                    </tr>
+                    <tr> 
+                        <td>Loan Term (# Month)</td>
+                        <td><label><input name="lntrm" type="text" size="30" /></label></td>
+                     </tr>
+                    <tr>
+                        <td class="fancy" colspan="2">Please submit, or reset:</td>
+                    </tr> 
+                    <tr> 
+                        <!--<td><input type="submit" value="Submit" /></td>-->
+                        <td><button type="button" onclick="return calcSub()">Submit</button></td>
+                        <!-- NEEEED the type button or it assume submit. fun-->
+                        <td><input type="reset" value="Reset" /> </td>
+                    </tr>
+                
+                </table>
+            </form>                
+        </div>
+        <div class="catagory">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>Output</h2></td>
+                </tr>
+                <tr><td colspan="2" class="horiz-line"></td></tr>
+                <tr>
+                    <td>Monthly Payments:</td>
+                    <td id="mnthpay"></td>
+                </tr>
+                <tr>
+                    <td>Total Payment:</td>
+                    <td id="ttlpay"></td>
+                </tr>
+                <tr>
+                    <td>Total Interest:</td>
+                    <td id="ttlint"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="footer">
+        Copyright Will Smylie, Author<br />
+        Page last updated: 3/8/2021<br />
+        Author: <a href="mailto:williamsmylie@utexas.edu"> Will Smylie</a>
+    </div>
+</div>
+</body>
+</html>

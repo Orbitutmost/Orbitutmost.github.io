@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>William Smylie HW6</title>
+    <link rel="stylesheet" media="screen" href="hw7.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="william smylie HW7">
+	<meta name="author" content="William Smylie">
+    <script src="hw7scrpt.js"></script>
+</head> 
+<!-- this is the HW7 for BULKO's CS 329E Web Dev Class -->
+<body>
+<div id="contain">
+    <div id="header">
+        <h1 class="fancy">Make Your Account</h1>
+    </div>
+    <div id="centercol">
+        <div class="catagory">
+            <form name="account" method="POST" action="http://www.cknuckles.com/cgi/echo.cgi"> <!-- form for this doc -->
+                <table>
+                    <tr>
+                        <td colspan="2"><h2>Account Creation</h2></td>        
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="cntr">Please enter your username and password. Use 6-10 characters.</td>        
+                    </tr>
+                    <tr> 
+                        <td>Username:</td>
+                        <td><label><input name="user" type="text" size="30" /></label></td>
+                    </tr>
+                    <tr> 
+                        <td>Password:</td>
+                        <td><label><input name="pass1" type="text" size="30" /></label></td>
+                    </tr>
+                    <tr> 
+                        <td>Repeat Password:</td>
+                        <td><label><input name="pass2" type="text" size="30" /></label></td>
+                     </tr>
+                    <tr>
+                        <td class="fancy" colspan="2">Please register, or clear:</td>
+                    </tr> 
+                    <tr> 
+                        <!--<td><input type="submit" value="Submit" /></td>-->
+                        <td><button type="button" onclick="return login()">Register</button></td>
+                        <!-- NEEEED the type button or it assume submit. fun-->
+                        <td><input type="reset" value="Clear" /> </td>
+                    </tr>
+                
+                </table>
+            </form>                
+        </div>
+    </div>
+    <div id="footer">
+        Copyright Will Smylie, Author<br />
+        Page last updated: 3/12/2021<br />
+        Author: <a href="mailto:williamsmylie@utexas.edu"> Will Smylie</a>
+    </div>
+</div>
+</body>
+</html>

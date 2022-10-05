@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>William Smylie HW10</title>
+    <link rel="stylesheet" media="screen" href="hw10.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="william smylie HW9">
+	<meta name="author" content="William Smylie">
+    <script type="text/javascript" src="hw10scrpt.js"></script>
+</head> 
+<!-- this is the HW7 for BULKO's CS 329E Web Dev Class -->
+<body>
+<div id="contain">
+    <div id="header">
+        <h1 class="fancy">Self Grading Quiz</h1>
+    </div>
+    <div id="centercol">
+        <div class="catagory">
+            <form name="quiz" method="POST" action="http://www.cknuckles.com/cgi/echo.cgi"> <!-- form for this doc -->
+                <table>
+                    <tr>
+                        <td colspan="2"><h2>True/False</h2></td>        
+                    </tr>
+                    <tr> 
+                        <td>1. "URL" stands for "Universal Reference Link"</td> <!-- false -->
+                        <td><label><input name="q1" type="radio" value="q_true" /></label> True <br />
+                            <label><input name="q1" type="radio" value="q_false" /></label> False
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td>2. An Apple MacBook is an example of a Linux system.</td> <!-- true -->
+                        <td><label><input name="q2" type="radio" value="q_true" /></label> True <br />
+                            <label><input name="q2" type="radio" value="q_false" /></label> False
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h2>Multiple Choice</h2></td>        
+                    </tr>
+                    <tr> 
+                        <td>3. Which of these do NOT contribute to packet delay in a packet switching network?</td>
+                        <td><label><input name="q3" type="checkbox" id="q3a1" value="a1" /></label> Processing delay at a router <br />
+                            <label><input name="q3" type="checkbox" id="q3a2" value="a2" /></label> CPU workload on a client <br /> <!-- correct -->
+                            <label><input name="q3" type="checkbox" id="q3a3" value="a3" /></label> Transmission delay along a communications link <br />
+                            <label><input name="q3" type="checkbox" id="q3a4" value="a4" /></label> Propagation delay <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="horiz-line"></td>        
+                    </tr>
+                    <tr> 
+                        <td>4. This Internet layer is responsible for creating the packets that move across the network.</td>
+                        <td><label><input name="q4" type="checkbox" id="q4a1" value="a1" /></label> Physical <br />
+                            <label><input name="q4" type="checkbox" id="q4a2" value="a2" /></label> Data Link <br />
+                            <label><input name="q4" type="checkbox" id="q4a3" value="a3" /></label> Network <br /> <!-- correct -->
+                            <label><input name="q4" type="checkbox" id="q4a4" value="a4" /></label> Transport <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h2>Fill In the Blank</h2></td>        
+                    </tr>
+                    <tr> 
+                        <td>5) _______ is a networking protocol that runs over TCP/IP, and governs communication between web browsers and web servers.</td> <!-- HTTP -->
+                        <td><label><input name="q5" type="text" size="10" /></label></td>
+                    </tr>
+                    <tr> 
+                        <td>6) A small icon displayed in a browser tabl that identifies a website is called a ________.</td> <!-- favicon -->
+                        <td><label><input name="q6" type="text" size="10" /></label></td>
+                    </tr>
+                    <tr> 
+                        <!--<td><input type="submit" value="Submit" /></td>-->
+                        <td><button type="button" onclick="return quickCheck()">Grade</button></td>
+                        <!-- NEEEED the type button or it assume submit. fun-->
+                        <td><input type="reset" value="Clear" /> </td>
+                    </tr>
+                
+                </table>
+            </form>                
+        </div>
+    <div id="footer">
+        Copyright Will Smylie, Author<br />
+        Page last updated: 3/29/2021<br />
+        Author: <a href="mailto:williamsmylie@utexas.edu"> Will Smylie</a>
+    </div>
+</div>
+</body> 
+</html>

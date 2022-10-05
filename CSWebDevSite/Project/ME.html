@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ME Group Chats</title>
+    <script src="GroupChats.js" defer></script>
+    <link href="main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class = "bgcolorcontainer">
+    <div id="top">
+        <div id="logo">
+             <a href="homepage.html"><img src="MELogo.png" alt="Group Logo" width="75" /></a>
+        </div>
+        <h1>Mechanical Engineering Group Chats</h1>
+    </div>
+    <div id="labels">
+        <div class="dropdown">
+            <button class="dropbtn">Group Chats</button>
+            <div class="dropdown-content">
+                <a href="ME.html">M.E.</a>
+                <a href="Math.html">Mathematics</a>
+                <a href="Science.html">Sciences</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Reference Docs</button>
+            <div class="dropdown-content">
+                <a href="https://www.me.utexas.edu/images/pdfs/ME-general-curriculum_spring-2021.pdf">Degree Plan</a>
+                <a href="https://registrar.utexas.edu/schedules">Course Schedule</a>
+                <a href="https://www.me.utexas.edu/">Dept Website</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Class Resources</button>
+            <div class="dropdown-content">
+                <a href="MEResources.html">M.E.</a>
+                <a href="MathResources.html">Mathematics</a>
+                <a href="ScienceResources.html">Sciences</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Tutoring</button>
+            <div class="dropdown-content">
+                <a href="meche_tutor.html">M.E.</a>
+                <a href="math_tutor.html">Mathematics</a>
+                <a href="science_tutor.html">Sciences</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Contact Us</button>
+            <div class="dropdown-content">
+                <a href="contactuspage.html">Contact Info</a>
+                <a href="contactussurvey.html">Survey</a>
+            </div>
+        </div>
+    </div>   
+    <div id="main">
+        <table class="contacttable">
+            <tr> 
+                <td colspan="2"> <h1>ME Groupmes</h1> </td>
+            </tr>
+            <tr>  
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME302: Engineering Design and Graphics</h3>
+                </td>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME333T: Engineering Communication</h3>
+                </td>
+            </tr>
+            <tr>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME316T: Thermodynamics</h3>
+                </td>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME318M: Engineering Computational Methods</h3>
+                </td>
+            </tr>
+            <tr>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME314D: Dynamics</h3>
+                </td>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME334: Materials Engineering</h3>
+                </td>
+            </tr>
+            <tr>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME330: Fluid Mechanics</h3>
+                </td>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME335: Engineering Statistics</h3>
+                </td>
+            </tr>
+            <tr>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME340: Mechatronics</h3>
+                </td>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME338: Machine Elements</h3>
+                </td>
+            </tr>
+            <tr>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME339: Heat Transfer</h3>
+                </td>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME344: Dynamic Systems and Controls</h3>
+                </td>
+            </tr>
+            <tr>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME366J: ME Design Methodology</h3>
+                </td>
+                <td class="contactinfobox">
+                    <h3 id="group_label">ME353: Engineering Finance</h3>
+                </td>
+            </tr>
+        </table>
+        <form id="addchat" onsubmit="checklink()">
+            <h2>Don't see your class? Add it here!</h2>
+            <p>
+                <label>
+                    Which class are you adding:
+                    <select id="class" required>
+                        <option selected="selected" value="1"> Engineering Design and Graphics</option>
+                        <option value="2"> Engineering Communication </option>
+                        <option value="3"> Thermodynamics </option>
+                        <option value="4"> Engineering Comp. Methods </option>
+                        <option value="5"> Dynamics </option>
+                        <option value="6"> Materials Engineering </option>
+                        <option value="7"> fluid Mechanics </option>
+                        <option value="8"> Engineering Statistics </option>
+                        <option value="9"> Mechatronics </option>
+                        <option value="10"> Machine Elements </option>
+                        <option value="11"> Heat Transfer </option>
+                        <option value="12"> Dynamic Systems and Controls </option>
+                        <option value="13"> ME Design Methodology </option>
+                        <option value="14"> Engineering Finance </option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label> Professor: <input id="prof" type="text" size="30" required /></label>
+            </p>
+            <p>
+                <label>
+                    Please copy the groupme link in the text box below <br>
+                    <textarea id="chatlink" rows="4" cols="36" req></textarea>
+                </label>
+            </p>
+            <p>
+                <input type="submit" value="Enter" />
+                <input type="reset" value="Clear" />
+            </p>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

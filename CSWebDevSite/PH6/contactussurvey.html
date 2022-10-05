@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Contact us Survey</title>
+    <link href="main.css" rel="stylesheet" />
+</head>
+<body>
+    <script language = "javascript" type = "text/javascript">
+        //Browser Support Code
+        function ajaxFunction(){
+           var ajaxRequest;  // The variable that makes Ajax possible!
+           ajaxRequest = new XMLHttpRequest();
+           // Create a function that will receive data sent from the server and alerts
+           ajaxRequest.onreadystatechange = function(){
+              if(ajaxRequest.readyState == 4){
+                 //var ajaxDisplay = document.getElementById('ajaxDiv');
+                 //ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                 console.log(ajaxRequest.responseText);
+                 alert(ajaxRequest.responseText);
+              }
+           }
+           // Now get the value from user and pass it to server script.
+           var visitorName = document.getElementById('visitorName').value;
+           var visitorEmail = document.getElementById('visitorEmail').value;
+           var commenttype = document.getElementById('commenttype').value;
+           var comments = document.getElementById('comments').value;
+           var queryString = "?visitorName=" + visitorName + "&visitorEmail=" + visitorEmail+ "&commenttype=" + commenttype+ "&comments=" + comments;
+           //queryString +=  "&firstName=" + firstName + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
+           if(visitorName!="" && visitorEmail!="" && comments!="") {
+            ajaxRequest.open("GET", "contactsurveyrecord.php" + queryString, true);
+            ajaxRequest.send(null);
+           } else { alert("Please fill out all boxes."); }
+        }
+    </script>
+    <div class = "bgcolorcontainer">
+    <div id="top">
+        <div id="logo">
+             <a href="homepage.html"><img src="MELogo.png" alt="Group Logo" width="75" /></a>
+        </div>
+        <h1>Mechanical Engineering Group Chats</h1>
+    </div>
+    <div id="labels">
+        <div class="dropdown">
+            <button class="dropbtn">Group Chats</button>
+            <div class="dropdown-content">
+                <a href="ME.php">M.E.</a>
+                <a href="Math.php">Mathematics</a>
+                <a href="Science.php">Sciences</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Reference Docs</button>
+            <div class="dropdown-content">
+                <a href="https://www.me.utexas.edu/images/pdfs/ME-general-curriculum_spring-2021.pdf">Degree Plan</a>
+                <a href="https://registrar.utexas.edu/schedules">Course Schedule</a>
+                <a href="https://www.me.utexas.edu/">Dept Website</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Class Resources</button>
+            <div class="dropdown-content">
+                <a href="MEResources.html">M.E.</a>
+                <a href="MathResources.html">Mathematics</a>
+                <a href="ScienceResources.html">Sciences</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Tutoring</button>
+            <div class="dropdown-content">
+                <a href="meche_tutor.html">M.E.</a>
+                <a href="math_tutor.html">Mathematics</a>
+                <a href="science_tutor.html">Sciences</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Contact Us</button>
+            <div class="dropdown-content">
+                <a href="contactuspage.html">Contact Info</a>
+                <a href="contactussurvey.html">Survey</a>
+            </div>
+        </div>
+    </div>       
+    <div id="main">
+        <form method="POST"> <!--action="./contactsurveyrecord.php" method="POST">-->
+        <table class="contactsurveytable">
+            <tr> 
+                <td colspan="2"> <h1 id="surveytitle">Contact Us Survey</h1> </td>
+            </tr>
+            <tr> 
+                <td colspan="2"> Please tell us what you need! </td>
+            </tr>
+            <tr> 
+                <td>Name:</td>
+                <td><label><input name="visitorName" id="visitorName" type="text" size="30" required /></label></td>
+            </tr>
+            <tr> 
+                <td>E-mail Address:</td>
+                <td><label><input name="visitorEmail" id="visitorEmail" type="text" size="30" required /></label></td>
+            </tr>
+            <tr> 
+                <td>Comment Topic:</td>
+                <td><label>
+                    <select name="commenttype" id="commenttype">
+                        <option selected="selected">General Layout</option>
+                        <option>Requested Feature/Topic</option>
+                        <option>Inaccurate Information</option>
+                        <option>Something to Remove</option>
+                        <option>Feedback</option>
+                        <option>Other</option>
+                </select></label></td>
+            </tr>
+            <tr> 
+                <td>What comments do you have:</td>
+                <td><label><textarea name="comments" id="comments" rows="4" cols="30">Comments here:</textarea></label></td>
+            </tr>
+            <tr> 
+                <td><input class="fc" type="button" onclick="ajaxFunction()" value="Submit" /></td>
+                <td><input type="reset" value="Reset" /> </td>
+            </tr>
+        
+        </table>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

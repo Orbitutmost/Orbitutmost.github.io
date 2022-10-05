@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>William Smylie HW17</title>
+    <link rel="stylesheet" media="screen" href="hw17.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="william smylie HW17">
+	<meta name="author" content="William Smylie">
+</head> 
+<!-- this is the HW17 for BULKO's CS 329E Web Dev Class -->
+<body>
+    <script language = "javascript" type = "text/javascript">
+        //Browser Support Code
+        function ajaxFunction(){
+           var ajaxRequest;  // The variable that makes Ajax possible!
+           ajaxRequest = new XMLHttpRequest();
+           // Create a function that will receive data sent from the server and alerts
+           ajaxRequest.onreadystatechange = function(){
+              if(ajaxRequest.readyState == 4){
+                 //var ajaxDisplay = document.getElementById('ajaxDiv');
+                 //ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                 console.log(ajaxRequest.responseText);
+                 alert(ajaxRequest.responseText);
+              }
+           }
+           // Now get the value from user and pass it to server script.
+           var inuser = document.getElementById('userid').value;
+           var inpass = document.getElementById('pass').value;
+           var queryString = "?user=" + inuser + "&pass=" + inpass;
+           //queryString +=  "&firstName=" + firstName + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
+           if(inuser!="" && inpass!="") {
+            ajaxRequest.open("GET", "hw17script.php" + queryString, true);
+            ajaxRequest.send(null);
+           } else { alert("pleae give a user and pass"); }
+        }
+
+  </script>
+<div id="contain">
+    <div id="header">
+        <h1 class="fancy">AJAX User Registration</h1>
+    </div>
+    <div id="centercol">
+        <div class="catagory">
+            <form method="post">
+                <table>
+                    <tr>
+                        <td colspan="2"> Please register</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30%;">Userid:</td><td><input type="text" name="userid" id="userid" required/></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30%;">Password:</td><td><input type="text" name="pass" id="pass" required/></td>
+                    </tr>
+                    <tr>
+                        <td><input class="fc" type="reset" value="Reset" /></td>
+                        <td><input class="fc" type="button" onclick="ajaxFunction()" value="Submit" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <!--<span style="position: absolute; top: 200px; left: 450px;" onmousedown="grabber(event);"> meow </span>-->
+    <div id="footer">
+        Copyright Will Smylie, Author<br />
+        Page last updated: 4/30/2021<br />
+        Author: <a href="mailto:williamsmylie@utexas.edu"> Will Smylie</a>
+    </div>
+</div>
+</body>
+</html>
